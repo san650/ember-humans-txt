@@ -2,5 +2,11 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-humans-txt'
+  name: 'ember-humans-txt',
+
+  contentFor(section) {
+    if (section === 'head') {
+      return '<link rel="author" href="humans.txt">';
+    }
+  }
 };
