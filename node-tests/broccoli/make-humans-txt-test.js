@@ -34,7 +34,7 @@ describe('Broccoli: MakeHumansTXT', function() {
       })
       .then(readFileSync)
       .then(function(content) {
-        assert.ok(content.includes('developer: Santiago'));
+        assert.ok(content.indexOf('developer: Santiago') > -1);
       });
   });
 });
