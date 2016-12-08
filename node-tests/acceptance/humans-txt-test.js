@@ -23,7 +23,7 @@ describe('Acceptance: humans.txt file generation', function() {
   it('generates a humans.txt file', function() {
     return readFile(app.filePath('/dist/humans.txt'))
       .then(function(content) {
-        assert.ok(content.includes('developer: Santiago'));
+        assert.ok(content.indexOf('developer: Santiago') > -1);
       });
   });
 });
