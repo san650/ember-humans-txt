@@ -1,21 +1,30 @@
 {
   "name": "ember-humans-txt",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "This Ember addon helps you generate and mantain a humans.txt file for your website",
+  "homepage": "https://github.com/san650/ember-humans-txt#readme",
+  "bugs": "https://github.com/san650/ember-humans-txt/issues",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "humans.txt",
+    "authors",
+    "contributors",
+    "manifest"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Santiago Ferreira",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/san650/ember-cli-page-object.git"
+  },
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember try:each",
+    "test": "ember try:each && npm run nodetest",
     "nodetest": "mocha node-tests --recursive"
   },
   "dependencies": {
