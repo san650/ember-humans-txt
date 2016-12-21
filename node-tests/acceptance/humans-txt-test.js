@@ -9,6 +9,11 @@ describe('Acceptance: humans.txt file generation', function() {
   var app;
 
   before(function() {
+    if (process.env.SKIP_ACCEPTANCE === 'true') {
+      this.skip();
+      return;
+    }
+
     app = new AddonTestApp();
 
     return app.create('dummy', {
@@ -23,7 +28,7 @@ describe('Acceptance: humans.txt file generation', function() {
   it('generates a humans.txt file', function() {
     return readFile(app.filePath('/dist/humans.txt'))
       .then(function(content) {
-        assert.ok(content.indexOf('developer: Santiago') > -1);
+        assert.ok(content.indexOf('Santiago Ferreira (@san650 at Twitter and Github)') > -1);
       });
   });
 });

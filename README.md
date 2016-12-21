@@ -1,7 +1,6 @@
 # ember-humans-txt
 [![Build Status](https://travis-ci.org/san650/ember-humans-txt.svg?branch=master)](https://travis-ci.org/san650/ember-humans-txt)
-
-**This ember addon is a work in progress**
+[![humans.txt](http://humanstxt.org/img/oficial-logos/humanstxt-isolated-blank.gif)](http://humanstxt.org/)
 
 This Ember addon helps you generate and mantain a [humans.txt](http://humanstxt.org) file for your website.
 
@@ -11,35 +10,21 @@ This Ember addon helps you generate and mantain a [humans.txt](http://humanstxt.
 
 ```js
 module.exports = function humans() {
-  var team = [
-    {
-      name: 'Santiago Ferreira',
-      title: 'developer',
-      site: 'san650@gmail.com',
-      twitter: 'san650'
-    }
-  ];
-
-  var thanks = [
-    'https://www.meetup.com/ember-montevideo'
-  ];
-
-  var site = {
-    standards: 'HTML5, CSS3, ES2015',
-    components: [
-      'EmberJS',
-      'jQuery'
-    ],
-    software: [
-      'VIM',
-      'ember-cli'
-    ]
-  };
-
   return {
-    team: team,
-    thanks: thanks,
-    site: site
+    team: 'Santiago Ferreira (@san650 at Twitter and Github)',
+
+    thanks: [
+      'EmberJS team for the great framework',
+      'ember-cli team for such a great tool'
+    ],
+
+    site: [
+      'Standards: HTML5, CSS3, ES2015',
+      'Components: EmberJS, node',
+      'Software: VIM, ember-cli'
+    ],
+
+    note: 'Give san650/ember-humans-txt a star on github!'
   };
 }
 ```
@@ -49,18 +34,22 @@ generates...
 ```
 /* TEAM */
 
-Developer: Santiago Ferreira
-Site: san650@gmail.com
-Twitter: @san650
+Santiago Ferreira (@san650 at Twitter and Github)
 
 /* THANKS */
-Name: https://www.meetup.com/ember-montevideo
+
+EmberJS team for the great framework
+ember-cli team for such a great tool
 
 /* SITE */
-Last update: 2016/12/07
+
 Standards: HTML5, CSS3, ES2015
-Components: EmberJS, jQuery
+Components: EmberJS, node
 Software: VIM, ember-cli
+
+/* NOTE */
+
+Give san650/ember-humans-txt a star on github!
 ```
 
 and also links the `humans.txt` file in your `index.html`.
@@ -70,6 +59,13 @@ and also links the `humans.txt` file in your `index.html`.
 ```
 
 See [humans.txt standard](http://humanstxt.org/Standard.html) for more information.
+
+## API
+
+* `team` is a string or array of team members.
+* `thanks` is a string or array of people you'd like to thank.
+* `site` is a string or array of technical specifications about your site.
+* `note` is a string or array of things you'd like to mention.
 
 ## Installation
 
@@ -97,6 +93,10 @@ $ npm test
 ## Project's health
 
 [![Build Status](https://travis-ci.org/san650/ember-humans-txt.svg?branch=master)](https://travis-ci.org/san650/ember-humans-txt)
+
+## Thanks
+
+Thanks to [humans-generator](https://github.com/haydenbleasel/humans-generator) project for the ideas.
 
 ## License
 

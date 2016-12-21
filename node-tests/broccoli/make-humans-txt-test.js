@@ -15,9 +15,7 @@ describe('Broccoli: MakeHumansTXT', function() {
 
     subject: function(inputNode) {
       return new MakeHumansTXT(inputNode, {
-        team: [
-          { title: 'developer', name: 'Santiago' }
-        ]
+        team: 'Neil Young (@Neilyoung on Twitter)'
       });
     },
   });
@@ -34,7 +32,7 @@ describe('Broccoli: MakeHumansTXT', function() {
       })
       .then(readFileSync)
       .then(function(content) {
-        assert.ok(content.indexOf('developer: Santiago') > -1);
+        assert.ok(content.indexOf('Neil Young (@Neilyoung on Twitter)') > -1);
       });
   });
 });

@@ -8,32 +8,25 @@ function humans() {
   // humans.txt format
 
   var team = [
-    {
-      name: 'Santiago Ferreira',
-      title: 'developer',
-      site: 'san650@gmail.com',
-      twitter: 'san650'
-    }
+    'Santiago Ferreira (@san650 at Twitter and Github)'
   ];
 
   var thanks = [
-    'https://www.meetup.com/ember-montevideo'
+    'Ember Montevideo Meetup (https://www.meetup.com/ember-montevideo)'
   ];
 
-  var site = {
-    standards: 'HTML5, CSS3, ES2015',
-    components: [
-      'EmberJS',
-      'jQuery'
-    ],
-    software: [
-      'VIM'
-    ]
-  };
+  var site = [
+    'Standards: HTML5, CSS3, ES2015',
+    'Components: EmberJS, node',
+    'Software: VIM, ember-cli'
+  ];
+
+  var note = 'Made with ♥ by Santiago Ferreira';
 
   return {
     team: team,
     thanks: thanks,
-    site: site
+    site: site,
+    note: note
   };
 }

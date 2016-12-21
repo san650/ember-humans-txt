@@ -22,10 +22,9 @@
     "url": "https://github.com/san650/ember-humans-txt.git"
   },
   "scripts": {
-    "build": "ember build",
-    "start": "ember server",
-    "test": "ember try:each && npm run nodetest",
-    "nodetest": "mocha node-tests --recursive"
+    "test": "npm run nodetest",
+    "node-test": "mocha node-tests --recursive",
+    "fast": "SKIP_ACCEPTANCE=true npm run node-test"
   },
   "dependencies": {
     "broccoli-plugin": "^1.3.0",
