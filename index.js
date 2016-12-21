@@ -17,11 +17,13 @@ module.exports = {
     }
   },
 
-  treeForPublic: function() {
-    var MakeHumansTXT = require('./lib/broccoli/make-humans-txt');
-    var humans = this._getHumansConfig();
+  treeFor(name) {
+    if (name === 'public') {
+      var MakeHumansTXT = require('./lib/broccoli/make-humans-txt');
+      var humans = this._getHumansConfig();
 
-    return new MakeHumansTXT('.', humans);
+      return new MakeHumansTXT('.', humans);
+    }
   },
 
   _getHumansConfig() {
