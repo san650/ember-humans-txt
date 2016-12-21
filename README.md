@@ -1,6 +1,5 @@
-# ember-humans-txt
+# ember-humans-txt [![humans.txt](http://humanstxt.org/img/oficial-logos/humanstxt-isolated-blank.gif)](http://humanstxt.org/)
 [![Build Status](https://travis-ci.org/san650/ember-humans-txt.svg?branch=master)](https://travis-ci.org/san650/ember-humans-txt)
-[![humans.txt](http://humanstxt.org/img/oficial-logos/humanstxt-isolated-blank.gif)](http://humanstxt.org/)
 
 This Ember addon helps you generate and mantain a [humans.txt](http://humanstxt.org) file for your website.
 
