@@ -13,8 +13,8 @@ describe('Broccoli: MakeHumansTXT', function() {
   var MakeHumansTXTHelper = makeTestHelper({
     fixturePath: __dirname,
 
-    subject: function(inputNode) {
-      return new MakeHumansTXT(inputNode, {
+    subject: function() {
+      return new MakeHumansTXT({
         team: 'Neil Young (@Neilyoung on Twitter)'
       });
     },
@@ -25,7 +25,7 @@ describe('Broccoli: MakeHumansTXT', function() {
   });
 
   it('generates humans.txt file', function() {
-    return MakeHumansTXTHelper('fixtures')
+    return MakeHumansTXTHelper()
       .then(function(result) {
         assert.deepEqual(result.files, ['humans.txt']);
         return path.join(result.directory, result.files[0]);

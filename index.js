@@ -22,7 +22,7 @@ module.exports = {
       var MakeHumansTXT = require('./lib/broccoli/make-humans-txt');
       var humans = this._getHumansConfig();
 
-      return new MakeHumansTXT('.', humans);
+      return new MakeHumansTXT(humans);
     }
   },
 
